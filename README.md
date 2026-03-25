@@ -1,152 +1,145 @@
-# 🚀 Job Portal Backend System (Spring Boot)
+Job Portal (LinkedIn Clone)
 
-A scalable and production-ready **Job Portal Backend System** built using **Java Spring Boot** that enables candidates to search and apply for jobs while allowing recruiters to post and manage job listings.
+A full-stack LinkedIn-like Job Portal built using Java Spring Boot (backend) and React + TypeScript (frontend).
+This application allows users to authenticate, create posts, connect, and interact in a social professional network.
 
-This project demonstrates real-world backend development skills including **REST API design, authentication, database management, and scalable architecture**.
+📌 Features
+🔐 JWT Authentication & OAuth 2.0 (Google Login)
+👤 User Registration & Login
+📝 Create & Manage Posts
+🤝 Connection / Networking System
+💬 Real-time Messaging (WebSocket based)
+📧 Email Testing using Mailhog
+📊 Scalable REST API Architecture
+🐳 Dockerized Backend Services
+⚡ CI/CD using GitHub Actions
+🛠 Tech Stack
+Backend
+Java 17
+Spring Boot
+Spring Security
+JWT Authentication
+Hibernate / JPA
+MySQL
+WebSocket (Real-time messaging)
+Gradle
+Frontend
+React.js (TypeScript)
+Vite
+SCSS Modules
+Axios
+DevOps & Tools
+Docker & Docker Compose
+GitHub Actions (CI/CD)
+Mailhog (Email Testing)
 
----
+🧠 Architecture
 
-## 📌 Features
+The backend follows a layered architecture:
 
-### 🔐 Authentication & Authorization
+Controller → Handles API requests
+Service → Business logic
+Repository → Database access
+DTO → Data transfer objects
+Configuration → Security & app configs
 
-* User Registration & Login
-* JWT-based Authentication
-* Role-Based Access Control (CANDIDATE / RECRUITER / ADMIN)
+Frontend follows a feature-based modular structure:
 
-### 💼 Job Management
+authentication
+feed
+messaging
+networking
+profile
+⚙️ Running the Project Locally
+🔹 Prerequisites
+Node.js (v22+)
+npm (v10+)
+Java JDK (v21)
+Docker (v24+)
+🖥 Backend Setup
+cd backend
+Run Docker containers (MySQL + Mailhog)
+docker-compose up
+Build the project
 
-* Create, update, delete job postings (Recruiter)
-* View all jobs
-* Advanced job filtering (location, role, salary)
+Windows:
 
-### 📥 Job Application System
+gradlew.bat build -t -x test
 
-* Apply to jobs
-* Track application status (APPLIED / REJECTED / SELECTED)
-* Recruiters can view applicants
+Mac/Linux:
 
-### 🔍 Search & Pagination
+./gradlew build -t -x test
+Optional: OAuth Setup
 
-* Keyword-based job search
-* Pagination & sorting for large datasets
+Windows:
 
-### 📄 Resume Upload
+set OAUTH_GOOGLE_CLIENT_ID=your_google_client_id
+set OAUTH_GOOGLE_CLIENT_SECRET=your_google_client_secret
 
-* Upload and manage resumes (PDF)
-* File handling support
+Mac/Linux:
 
-### ⚠️ Error Handling & Validation
+export OAUTH_GOOGLE_CLIENT_ID=your_google_client_id
+export OAUTH_GOOGLE_CLIENT_SECRET=your_google_client_secret
+Run Backend
 
-* Global exception handling using `@ControllerAdvice`
-* Input validation using annotations (`@NotBlank`, `@Email`, etc.)
+Windows:
 
-### 📊 API Documentation
+gradlew.bat bootRun
 
-* Swagger UI for testing APIs
+Mac/Linux:
 
----
+./gradlew bootRun
+🌐 Frontend Setup
+cd frontend
+Setup environment variables
 
-## 🛠 Tech Stack
+Windows:
 
-| Category    | Technology                  |
-| ----------- | --------------------------- |
-| Backend     | Java 17, Spring Boot        |
-| Security    | Spring Security, JWT        |
-| Database    | PostgreSQL                  |
-| ORM         | Spring Data JPA (Hibernate) |
-| Build Tool  | Maven                       |
-| API Testing | Postman,                    |
-           
+copy .env.example .env
 
----
+Mac/Linux:
 
-## 🧱 Project Architecture
+cp .env.example .env
+Install dependencies
+npm install
+Run frontend
+npm run dev
+🔗 Application URLs
+Backend → http://localhost:8080
+Frontend → http://localhost:5173
+Mailhog UI → http://localhost:8025
+🗄 Database Configuration
+Host: 127.0.0.1
+Port: 3306
+Username: root
+Password: root
+⚙️ CI/CD (GitHub Actions)
 
-The project follows a **layered architecture**:
+To test workflows locally using act:
 
-Controller → Service → Repository → Database
+Create a file event.json:
 
-* **Controller Layer** → Handles HTTP requests
-* **Service Layer** → Business logic
-* **Repository Layer** → Database interaction
-* **DTO Layer** → Data transfer & validation
+{
+  "repository": {
+    "default_branch": "main"
+  },
+  "push": {
+    "base_ref": "refs/heads/main",
+    "commits": [
+      {
+        "modified": ["frontend/some-file.js", "backend/some-file.java"]
+      }
+    ]
+  }
+}
 
----
+Run:
 
-## 📂 Project Structure
-
-```
-src/main/java/com/jobportal
-│
-├── controller
-├── service
-├── repository
-├── entity
-├── dto
-├── config
-├── exception
-└── security
-```
-
----
-
-## 🔗 API Endpoints (Sample)
-
-### 🔐 Auth APIs
-
-* `POST /api/auth/register`
-* `POST /api/auth/login`
-
-### 💼 Job APIs
-
-* `POST /api/jobs` → Create job
-* `GET /api/jobs` → Get all jobs
-* `GET /api/jobs/search` → Search jobs
-* `PUT /api/jobs/{id}` → Update job
-* `DELETE /api/jobs/{id}` → Delete job
-
-### 📥 Application APIs
-
-* `POST /api/applications/apply/{jobId}`
-* `GET /api/applications/user`
-* `GET /api/applications/job/{jobId}`
-
----
-
-## 🚀 Getting Started
-
-### 🔧 Prerequisites
-
-* Java 17+
-* Maven
-* PostgreSQL
-
-### ⚙️ Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/job-portal-backend.git
-
-# Navigate to project
-cd job-portal-backend
-
-# Install dependencies
-mvn clean install
-
-# Run the application
-mvn spring-boot:run
-```
-
----
-
-## 🧠 Skills Demonstrated
-
-* REST API Development
-* Spring Boot Backend Engineering
-* JWT Authentication & Security
-* Database Design & Integration
-* Clean Code & Layered Architecture
-* Scalable Backend Systems
-
+act -e event.json
+🎯 Future Improvements
+Add notifications system
+Improve microservices architecture
+Add caching (Redis)
+Deploy on cloud (AWS/Azure)
+Enhance UI/UX
 
