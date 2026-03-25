@@ -140,27 +140,6 @@ mvn spring-boot:run
 
 ---
 
-## 🌍 Deployment
-
-The application is deployed on:
-
-* Render / Railway (Backend Hosting)
-
-👉 Live API: [Add your deployed link here]
-👉 Swagger Docs: [Add Swagger URL here]
-
----
-
-## 💡 Future Improvements
-
-* Email notifications for job applications
-* Resume parsing & keyword matching
-* Admin dashboard
-* Microservices architecture
-* Docker containerization
-
----
-
 ## 🧠 Skills Demonstrated
 
 * REST API Development
