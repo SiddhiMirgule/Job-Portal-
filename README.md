@@ -134,8 +134,8 @@ Create a file event.json:
 }
 
 Run:
-
 act -e event.json
+
 🎯 Future Improvements
 Add notifications system
 Improve microservices architecture
