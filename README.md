@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="./screenshot.png" alt="LinkedIn Clone Screenshot" width="100%"/>
+  <img src="./linkedin-main/screenshot.png" alt="LinkedIn Clone Screenshot" width="100%"/>
 </div>
 
 <div align="center">
