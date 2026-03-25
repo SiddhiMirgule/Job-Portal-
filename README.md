@@ -2,7 +2,7 @@
 <div align="center">
   <img src="./screenshot.png" alt="LinkedIn Clone Screenshot" width="100%"/>
 </div>
-<div></div>
+
 <div align="center">
 
 # JOb Portal (LinkedIn clone)
