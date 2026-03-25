@@ -1,0 +1,101 @@
+.profile {
+  display: grid;
+  gap: 1rem;
+
+  .main {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .experience,
+  .education,
+  .skills {
+    background-color: white;
+    border-radius: 0.3rem;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .emptySection {
+    font-size: 0.88rem;
+    color: rgba(0, 0, 0, 0.45);
+  }
+
+  .profileItem {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .profileItemIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #e8f4fd;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      fill: var(--primary-color);
+    }
+  }
+
+  .profileItemTitle {
+    font-weight: 600;
+    font-size: 0.93rem;
+    color: #000;
+  }
+
+  .profileItemSubtitle {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.65);
+    margin-top: 0.1rem;
+  }
+
+  .profileItemMeta {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.45);
+    margin-top: 0.1rem;
+  }
+
+  .skillTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skillTag {
+    background: #e8f4fd;
+    color: var(--primary-color);
+    border: 1px solid #b3d8f7;
+    border-radius: 2rem;
+    padding: 0.3rem 0.9rem;
+    font-size: 0.83rem;
+    font-weight: 500;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  @media screen and (width >= 1024px) {
+    grid-template-columns: 1fr 20rem;
+    align-items: flex-start;
+
+    .sidebar {
+      display: block;
+      height: max-content;
+    }
+  }
+}
