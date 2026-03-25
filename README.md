@@ -56,8 +56,8 @@ This project demonstrates real-world backend development skills including **REST
 | Database    | PostgreSQL                  |
 | ORM         | Spring Data JPA (Hibernate) |
 | Build Tool  | Maven                       |
-| API Testing | Postman, Swagger            |
-| Deployment  | Render / Railway            |
+| API Testing | Postman,                    |
+           
 
 ---
 
