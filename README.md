@@ -2,10 +2,10 @@
 <div align="center">
   <img src="./screenshot.png" alt="LinkedIn Clone Screenshot" width="100%"/>
 </div>
-
+<div></div>
 <div align="center">
 
-# LinkedIn Clone — Full Stack Project
+# JOb Portal (LinkedIn clone)
 
 A **production-ready LinkedIn Clone** built with **Spring Boot + React (TypeScript)**, featuring
 real-time messaging, a fully functional **Jobs Portal**, professional profiles, social feed,
